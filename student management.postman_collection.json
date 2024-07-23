@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "092e14ba-9937-45d4-9a8a-c44f0f9a6283",
+		"name": "student management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10422254"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"abdelraoof\",\r\n    \"lastName\":\"rabie\",\r\n    \"email\":\"abdelraoofrabie@gmail.com\",\r\n    \"password\":\"abdelraoof\",\r\n    \"username\":\"abdelraoof\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \"password\":\"abdelraoof\",\r\n    \"username\":\"abdelraoof\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createCourse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmRlbHJhb29mIiwiZXhwIjoxNzIxNzY3NDA1LCJpYXQiOjE3MjE3NjcxMDV9.MC73lXG7-PdtATvFQWVIGdClEmuL9_lX6sEDTmOqBHt3WdnErvT4KKkrdEuQSqsi2-EeXupbysffsFwlAn0XEw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"math\",\r\n\"description\":\"math level 1\",\r\n\"startDate\":\"2024/07/22\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view courses",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmRlbHJhb29mIiwiZXhwIjoxNzIxNzc3MDk5LCJpYXQiOjE3MjE3NTkwOTl9.OIpcVb4AHtOs0YWNcKBANhAfGGDlpOmRyjcyiksgZ_UFtvIzdJfrlZ_z19RzjpBLII-EDdEaqPYTHw6iaobnmg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh-token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmRlbHJhb29mIiwiZXhwIjoxNzIxNzY3NDA1LCJpYXQiOjE3MjE3NjcxMDV9.MC73lXG7-PdtATvFQWVIGdClEmuL9_lX6sEDTmOqBHt3WdnErvT4KKkrdEuQSqsi2-EeXupbysffsFwlAn0XEw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/refresh-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"refresh-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmRlbHJhb29mIiwiZXhwIjoxNzIxNzY3NzI0LCJpYXQiOjE3MjE3Njc0MjR9.x6Qg6LyN8KTjOGH0V8uxFtKM-ctCxB_NY866D96nm0qj09Z6CD6jgbabPtx5c3uoerhZ74R-L0ZZbOH_VoouFA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/courses/1/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"courses",
+						"1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unregister",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmRlbHJhb29mIiwiZXhwIjoxNzIxNzY3NzI0LCJpYXQiOjE3MjE3Njc0MjR9.x6Qg6LyN8KTjOGH0V8uxFtKM-ctCxB_NY866D96nm0qj09Z6CD6jgbabPtx5c3uoerhZ74R-L0ZZbOH_VoouFA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/courses/1/unregister",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"courses",
+						"1",
+						"unregister"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
